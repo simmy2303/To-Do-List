@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todo List</title>
+    <link rel="stylesheet" href="todolist.css">
+    <link rel="icon" type="image/x-icon" href="logotodolist.png">
+    <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+    </head>
+  <body>
+    <div class="flexrow-container">
+        <button onclick="changeTheme('standardTheme')" class="standardTheme theme-selector"></button>
+        <button onclick="changeTheme('lightTheme')" class="lightTheme theme-selector"></button>
+        <button onclick="changeTheme('darkerTheme')" class="darkerTheme theme-selector"></button>
+    </div>
+
+    <a class="indexlink" href="todoPractice1.html"><p id="titlee"><img src="logotodolist.png">TODO LIST</p></a>
+    <h3 class="num"></h3>
+
+    <div class="todo-input-grid">
+      <input onkeydown="enterkey()" placeholder="Add a task."
+        class="js-name-input name-input">
+      <input type="date"
+        class="js-due-date-input due-date-input">
+      <button onclick="
+        addTodo();
+      " class="add-todo-button"><i class="fa fa-plus"></i>
+</button>
+    </div>
+    
+        <span id="datetime"></span>
+        <script src="time.js"></script>
+   
+    <div class="todo-list"></div>
+
+    <script src="todolist.js"></script>
+  </body>
+</html>
